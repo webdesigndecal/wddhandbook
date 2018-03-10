@@ -1,0 +1,30 @@
+@mixin primary-font {
+  font-family: 'Karla', sans-serif;
+  font-size: 12px;
+}
+
+@mixin secondary-font {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+@mixin short-transition {
+  transition: all 0.1s ease;
+}
+
+@mixin reg-transition {
+  transition: all 0.15s ease;
+}
+
+@mixin long-transition {
+  transition: all 0.2s ease;
+}
+
+@mixin unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
