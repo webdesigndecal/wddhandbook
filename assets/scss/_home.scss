@@ -1,6 +1,10 @@
 @import "variables",
         "mixins";
 
+.home-header {
+  padding-top: 3vh;
+}
+
 .selector-wrapper {
     width: 100vw;
     display: flex;
@@ -14,6 +18,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 4vh;
 }
 
 .selector-item {

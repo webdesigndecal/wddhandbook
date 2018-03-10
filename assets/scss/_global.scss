@@ -7,12 +7,20 @@
 html, body {
   overflow-x: hidden;
   color: $general-font-color;
-  padding: 2vh 0;
+  padding: 1vh 0;
+  padding-bottom: 5vh;
   background-color: $primary-light;
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 5vw 5vh 5vw;
+}
+
 header {
-  margin-bottom: 10vh;
+  margin-bottom: 8vh;
 }
 
 /* general text */
