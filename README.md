@@ -1,10 +1,8 @@
 # WDD Handbook
 
-Handbook for Web Design DeCal students to review concepts from lecture and lab
+Handbook for Web Design DeCal students to review concepts from lecture and lab. This handbook is built with Jekyll (and therefore uses Liquid), HTML, CSS, SASS, JS, jQuery, and Grunt.
 
 ## Contributing
-
-This handbook is built with Jekyll (and therefore uses Liquid), HTML, CSS, SASS, JS, jQuery, and Grunt.
 
 To start contributing, clone this repository:
 
@@ -24,13 +22,13 @@ Install Jekyll [here](https://jekyllrb.com/) and run:
 jekyll serve
 ```
 
-To compile the scss files, run
+To compile the scss files, run:
 
 ```
 grunt dev
 ```
 
-If editing scss styles, run
+If editing scss styles, run:
 
 ```
 grunt watch
