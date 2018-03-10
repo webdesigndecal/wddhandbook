@@ -17,7 +17,7 @@ title: WDD Handbook
 email: ask@wdd.io
 description: > # this means to ignore newlines until "baseurl:"
   Handbook for WDD students to review concepts from lecture and lab
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/wddhandbook" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: webdesigndecal
 
