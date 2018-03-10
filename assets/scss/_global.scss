@@ -44,10 +44,11 @@ p {
 
 a {
   @include reg-transition;
+  color: $primary-blue;
   font-size: inherit;
 
   &:hover {
-      color: $primary-blue;
+      color: darken($primary-blue, 10%);
   }
 }
 
@@ -67,4 +68,8 @@ a {
 
 .lightened-text {
   color: $lighter-font-color
+}
+
+.highlighted-text {
+  color: $primary-blue;
 }
