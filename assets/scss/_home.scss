@@ -1,0 +1,69 @@
+@import "variables",
+        "mixins";
+
+.selector-wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.selector-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    margin: 30px;
+    position: relative;
+}
+
+.selector-item:first-child {
+    background-color: $primary-blue;
+    @include reg-transition;
+
+    &:hover {
+        background-color: darken($primary-blue, 10%);
+    }
+}
+
+.selector-item:last-child {
+    background-color: darken($primary-green, 10%);
+    @include reg-transition;
+
+    &:hover {
+        background-color: darken($primary-green, 15%);
+    }
+}
+
+.selector-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 26px 26px 0;
+  border-style: solid;
+  display: block;
+  width: 0;
+}
+
+.selector-item:first-child:before {
+    border-color: darken($primary-blue, 20%) #fff;
+}
+
+.selector-item:last-child:before {
+    border-color: darken($primary-green, 25%) #fff;
+}
+
+.selector-item p {
+    color: white;
+}

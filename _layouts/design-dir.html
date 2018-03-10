@@ -12,7 +12,7 @@
     <meta property="og:title" content="WDD Handbook">
     <meta property="og:image" content="assets/images/wdd-logo.png">
     <link rel="icon" href="assets/images/wdd-logo.png">
-    <title>WDD Handbook</title>
+    <title>Design | WDD Handbook</title>
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Karla" rel="stylesheet">
@@ -21,31 +21,26 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 
     <!-- Custom CSS -->
-    <link href="assets/css/main.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/main.min.css" rel="stylesheet" type="text/css">
 
     <!-- JS CDNs -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
     <!-- Custom Scripts -->
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
 
   </head>
   <body>
     <div class="handbook-home">
         <header>
           <h1>WDD Handbook</h1>
-          <p class="uppercase centered-text lightened-text">Home | Spring 2018</p>
+          <p class="uppercase centered-text lightened-text"><span class="design-highlighted-text">Design</span> | Spring 2018</p>
       </header>
 
-      <div class="selector-wrapper">
-        <div class="selector">
-            <a class="selector-item" href="directories/programming.html">
-                <p class="centered-text">Programming<br/>Handbook</p>
-            </a>
-            <a class="selector-item" href="directories/design.html">
-                <p class="centered-text">Design<br/>Handbook</p>
-            </a>
+      <div class="topic-list-wrapper">
+        <div class="topic-list">
+            {% include design-topic-list.html %}
         </div>
       </div>
     </div>

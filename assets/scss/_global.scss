@@ -1,6 +1,9 @@
 @import "variables",
         "mixins";
 
+
+/* general */
+
 html, body {
   overflow-x: hidden;
   color: $general-font-color;
@@ -9,8 +12,10 @@ html, body {
 }
 
 header {
-  margin-bottom: 8vh;
+  margin-bottom: 10vh;
 }
+
+/* general text */
 
 h1, h2, h3, h4, h5, h6, p, a {
   @include primary-font;
@@ -42,7 +47,9 @@ p {
   }
 }
 
-a {
+/* links */
+
+a.programming-link {
   @include reg-transition;
   color: $primary-blue;
   font-size: inherit;
@@ -52,11 +59,23 @@ a {
   }
 }
 
+a.design-link {
+  @include reg-transition;
+  color: $primary-green;
+  font-size: inherit;
+
+  &:hover {
+      color: darken($primary-green, 10%);
+  }
+}
+
+/* element classes */
+
 .hide {
   display: none;
 }
 
-// text classes
+/* text classes */
 
 .uppercase {
   text-transform: uppercase;
@@ -70,6 +89,10 @@ a {
   color: $lighter-font-color
 }
 
-.highlighted-text {
+.programming-highlighted-text {
   color: $primary-blue;
+}
+
+.design-highlighted-text {
+  color: $primary-green;
 }
