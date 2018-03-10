@@ -42,6 +42,15 @@ p {
   }
 }
 
+a {
+  @include reg-transition;
+  font-size: inherit;
+
+  &:hover {
+      color: $primary-blue;
+  }
+}
+
 .hide {
   display: none;
 }

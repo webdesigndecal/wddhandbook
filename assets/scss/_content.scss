@@ -1,17 +1,17 @@
 @import "variables",
         "mixins";
 
-.topic-list-wrapper {
+.content-wrapper {
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.topic-list {
-    width: 50vw;
+.content {
+    width: 60vw;
 }
 
-.topic-item {
+.content-section {
     margin-bottom: 5vh;
 }
