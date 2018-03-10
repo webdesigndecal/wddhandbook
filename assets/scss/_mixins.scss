@@ -1,11 +1,16 @@
 @mixin primary-font {
-  font-family: 'Karla', sans-serif;
-  font-size: 12px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $general-font-color;
 }
 
 @mixin secondary-font {
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  color: $general-font-color;
+  letter-spacing: 0.5px;
+  line-height: 1.25;
 }
 
 @mixin short-transition {

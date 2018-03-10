@@ -4,6 +4,12 @@
 html, body {
   overflow-x: hidden;
   color: $general-font-color;
+  padding: 2vh 0;
+  background-color: $primary-light;
+}
+
+header {
+  margin-bottom: 8vh;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -11,15 +17,21 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 34px;
+  text-align: center;
+  color: $primary-dark;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 20px;
+}
+
+p {
+  @include secondary-font;
 }
 
 @media screen and (max-width: 1024px) {
@@ -32,4 +44,18 @@ h3 {
 
 .hide {
   display: none;
+}
+
+// text classes
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.lightened-text {
+  color: $lighter-font-color
 }

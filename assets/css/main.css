@@ -15,17 +15,33 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 * { -webkit-box-sizing: border-box; box-sizing: border-box; outline: none; }
 
-html, body { overflow-x: hidden; color: #333; }
+html, body { overflow-x: hidden; color: #333; padding: 2vh 0; background-color: #fcfcfc; }
 
-h1, h2, h3, h4, h5, h6, p, a { font-family: 'Karla', sans-serif; font-size: 12px; }
+header { margin-bottom: 8vh; }
 
-h1 { font-size: 32px; }
+h1, h2, h3, h4, h5, h6, p, a { font-family: 'PT Sans', sans-serif; font-size: 16px; line-height: 1.5; color: #333; }
 
-h2 { font-size: 28px; }
+h1 { font-size: 34px; text-align: center; color: #4c5764; }
 
-h3 { font-size: 24px; }
+h2 { font-size: 24px; }
 
-@media screen and (max-width: 1024px) { h1, h2, h3, h4, h5, h6, p { font-family: 'Karla', sans-serif; font-size: 12px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: 10px; } }
+h3 { font-size: 20px; }
+
+p { font-family: 'Karla', sans-serif; font-size: 16px; color: #333; letter-spacing: 0.5px; line-height: 1.25; }
+
+@media screen and (max-width: 1024px) { h1, h2, h3, h4, h5, h6, p { font-family: 'PT Sans', sans-serif; font-size: 16px; line-height: 1.5; color: #333; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: 10px; } }
 .hide { display: none; }
+
+.uppercase { text-transform: uppercase; }
+
+.centered-text { text-align: center; }
+
+.lightened-text { color: #7a8899; }
+
+.topic-list-wrapper { width: 100vw; display: flex; flex-direction: column; align-items: center; }
+
+.topic-list { width: 50vw; }
+
+.topic-item { margin-bottom: 5vh; }
 
 /*# sourceMappingURL=main.css.map */
