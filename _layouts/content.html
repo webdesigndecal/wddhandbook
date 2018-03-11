@@ -33,8 +33,12 @@
   </head>
   <body>
     <div class="handbook-home">
-        {% include content-nav.html %}
-
+        {% if page.link-type == "design-link" %}
+            {% include content-nav.html link-type="design-link" %}
+        {% else %}
+            {% include content-nav.html link-type="programming-link" %}
+        {% endif %}
+        
         <header>
             <h1>{{ page.title }}</h1>
             <p class="uppercase centered-text lightened-text"><span class="highlighted-text">{{ page.week }}</span> | Spring 2018</p>

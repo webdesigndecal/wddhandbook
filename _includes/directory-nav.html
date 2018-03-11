@@ -1,0 +1,9 @@
+<nav class="design-nav">
+    {% if include.link-type == "design-link" %}
+        <p><a class={{ include.link-type }} href="../index.html">WDD Handbook</a></p>
+        <p><a class={{ include.link-type }} href="../directories/programming.html">Switch to {{ page.switch-text }}</a></p>
+    {% else %}
+        <p><a class={{ include.link-type }} href="../index.html">WDD Handbook</a></p>
+        <p><a class={{ include.link-type }} href="../directories/design.html">Switch to {{ page.switch-text }}</a></p>
+    {% endif %}
+</nav>

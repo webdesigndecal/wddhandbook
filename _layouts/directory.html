@@ -12,7 +12,7 @@
     <meta property="og:title" content="WDD Handbook">
     <meta property="og:image" content="../assets/images/wdd-logo.png">
     <link rel="icon" href="assets/images/wdd-logo.png">
-    <title>Design | WDD Handbook</title>
+    <title>{% if page.type == "design" %} Design {% else %} Programming {% endif %} | WDD Handbook</title>
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto|Karla" rel="stylesheet">
@@ -33,16 +33,24 @@
   </head>
   <body>
     <div class="handbook-home">
-        {% include design-nav.html %}
+        {% if page.type == "design" %}
+            {% include directory-nav.html link-type="design-link" %}
+        {% else %}
+            {% include directory-nav.html link-type="programming-link" %}
+        {% endif %}
 
         <header>
             <h1>WDD Handbook</h1>
-            <p class="uppercase centered-text lightened-text"><span class="design-highlighted-text">Design</span> | Spring 2018</p>
+            <p class="uppercase centered-text lightened-text"><span class="{{ page.type }}-highlighted-text">{{ page.type }}</span> | Spring 2018</p>
         </header>
 
       <div class="topic-list-wrapper">
         <div class="topic-list">
-            {% include design-topic-list.html %}
+            {% if page.type == "design" %}
+                {% include design-topic-list.html %}
+            {% else %}
+                {% include programming-topic-list.html %}
+            {% endif %}
         </div>
       </div>
     </div>
