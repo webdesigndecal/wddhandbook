@@ -10,6 +10,10 @@
 
 .topic-list {
     width: 50vw;
+
+    @media screen and (max-width: 600px) {
+        width: 70vw;
+    }
 }
 
 .topic-item {
