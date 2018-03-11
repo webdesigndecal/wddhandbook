@@ -61,7 +61,7 @@ a.design-link:hover { color: #58b152; }
 
 .selector { display: flex; flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: 4vh; }
 
-.selector-item { display: flex; flex-direction: row; align-items: center; justify-content: center; width: 350px; height: 350px; margin: 30px 50px; position: relative; }
+.selector-item { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 350px; height: 350px; margin: 30px 50px; position: relative; }
 
 .selector-item:first-child { background-color: #6493be; transition: all 0.15s ease; }
 .selector-item:first-child:hover { background-color: #477aa8; }
@@ -74,6 +74,8 @@ a.design-link:hover { color: #58b152; }
 .selector-item:first-child:before { border-color: #386084 #fff; }
 
 .selector-item:last-child:before { border-color: #3d7e39 #fff; }
+
+.selector-item img { width: 150px; margin-top: 30px; }
 
 .selector-item p { color: white; }
 

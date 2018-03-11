@@ -23,7 +23,7 @@
 
 .selector-item {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 350px;
@@ -67,6 +67,11 @@
 
 .selector-item:last-child:before {
     border-color: darken($primary-green, 25%) #fff;
+}
+
+.selector-item img {
+    width: 150px;
+    margin-top: 30px;
 }
 
 .selector-item p {
