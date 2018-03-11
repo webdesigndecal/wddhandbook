@@ -1,17 +1,63 @@
 ---
 week: Week Two
-title: HTML Basics II
+title: Introduction to CSS
 layout: content
 switch-text: "Design"
 link-type: "programming-link"
 
-text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum nibh iaculis, volutpat velit et, convallis enim. Cras turpis magna, sollicitudin id lobortis ut, ornare sed ex. Nullam rutrum ultricies ultrices. Donec volutpat laoreet tellus, non commodo nisl finibus sit amet. Nullam aliquam consequat malesuada. Mauris tincidunt volutpat ipsum, facilisis tristique magna. Donec sed urna pretium, ultrices risus vitae, condimentum augue. Aenean ornare sem id velit efficitur sollicitudin. Suspendisse facilisis sem et eros lobortis iaculis.
+text: "
+<h2>Introduction</h2>
+<p>
+    As you saw last week, HTML is all words and boxes surrounded by <span class=\"programming-highlighted-text\">tags</span>, and uses <span class=\"programming-highlighted-text\">hierarchy</span> to structure and contain things. If you looked at a webpage that had only HTML, you would see just a bunch of black words on white. It was proably the most basic unpleasant looking website you've ever seen. CSS will give you the power to transform that skeleton into a beauty. Whereas HTML is all tags and hierarchy, CSS is all about <span class=\"programming-highlighted-text\">selectors</span> and <span class=\"programming-highlighted-text\">adding properties</span> to different elements. Let's dive in and learn about how to select an element from your HTML and style it.
+</p>
+
 <br/><br/>
-Donec a porta neque, a faucibus purus. Curabitur tincidunt congue egestas. Sed sit amet urna tempus, ultricies massa sit amet, maximus massa. Nullam molestie faucibus risus, a sodales nulla auctor sed. Nulla elementum sem nec tincidunt feugiat. Sed laoreet mollis enim, id pulvinar dolor vestibulum non. Praesent velit risus, placerat vel ipsum nec, facilisis rhoncus ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse at lectus et nisl sollicitudin auctor quis ac leo. Cras commodo magna libero. Curabitur pulvinar libero diam, eu hendrerit libero rhoncus sit amet.
+
+<h2>HTML Classes and IDs</h2>
+<p>
+    In order to give your HTML elements, like paragraphs and divs and headers, any style or color, you'll have to select the element. This is usually done using classes and IDs. To add classes and IDs to your HTML, you'll place them in the <span class=\"programming-highlighted-text\">opening tag</span>. If you've never seen it before, it'll look something like this: for a class, <code class=\"programming-highlighted-text\">&lt;div class=\"first-class\"&gt;&lt;/div&gt;</code> or for an ID, <code class=\"programming-highlighted-text\">&lt;div id=\"first-div\"&gt;&lt;/div&gt;</code>.
+</p>
+<br/>
+<p>
+    Now, you can't just use them however you want. There's one rule you must remember. Each ID must be unique; the <code class=\"programming-highlighted-text\">first-div</code> ID can only be used that one time. However, classes can be used as many times as you want, but typically on elements that are similar and would be styled similarly. Think of it this way. Many people can be in <code class=\"programming-highlighted-text\">first-class</code>, but they're all similar (probably rich). However, to identify them, they'll each have their own unique ID card.
+</p>
+
 <br/><br/>
-Pellentesque ullamcorper ultricies tempor. Aenean imperdiet turpis et metus aliquam consectetur. Praesent ullamcorper magna vel nibh volutpat, ac suscipit tortor vehicula. Quisque blandit massa vitae ex tristique, at placerat lorem dictum. Quisque in imperdiet nibh. Vivamus mollis pretium quam, at mattis ligula euismod et. Morbi tempus ipsum in tortor tincidunt dictum. Etiam consequat felis nec leo molestie tempus. Quisque id dignissim tellus, ac egestas augue. Nulla facilisi. Morbi ex ligula, eleifend vitae ornare in, bibendum a sapien. Curabitur eget cursus metus, non convallis erat. Nulla euismod, massa eu lacinia efficitur, elit felis laoreet tortor, quis interdum augue ligula ut lorem. Nullam metus arcu, condimentum vel tristique sagittis, gravida in metus.
+
+<h2>CSS Selectors</h2>
+<p>
+    To actually select HTML elements in your CSS file, you'll have to use those classes and IDs as selectors. The typical CSS format is <code class=\"programming-highlighted-text\">selector { property: value; }</code>. In words, that's a selector followed by curly braces. Within the curly braces are the styles you'd want to give to the element you selected with your selector.
+</p>
+<br/>
+<p>
+    To select an element with the class <code class=\"programming-highlighted-text\">first-class</code>, you'll have to put a <span class=\"programming-highlighted-text\">dot</span> before the class name: <code class=\"programming-highlighted-text\">.first-class {}</code>. To select an element with the ID <code class=\"programming-highlighted-text\">first-div</code>, put a <span class=\"programming-highlighted-text\">pound sign</span> before the ID name: <code class=\"programming-highlighted-text\">#first-div {}</code>. It is also possible to select every element with a certain tag.
+</p>
+<br/>
+<p>
+    As a side note, if you wanted to select all divs, it's as simple as <code class=\"programming-highlighted-text\">div {}</code>. This is not done very often for any tag or element since we don't usually want to style every single div or paragraph or button in exactly the same way on a page. Even if we do want every div (or something else) the same on a simple page, if we add a special div later, it'll have certain styles already in place that might <span class=\"programming-highlighted-text\">confuse</span> whoever is writing or maintaining the code. Those styles already in place would also then have to be overriden.
+</p>
+<br/>
+<h3>Advanced Selector Use</h3>
+<p>
+    If you have a firm grasp on selectors, this section will give you even more selection power. Let's go through more selector possibilities. It is possible to select multiple classes at once using a comma: <code class=\"programming-highlighted-text\">.first-class, .second-class {}</code>. You can also select only elements that have both classes by putting no space between classes: <code class=\"programming-highlighted-text\">.first-class.second-class {}</code>. To select a child of a certain parent, put only a space between the classes: <code class=\"programming-highlighted-text\">.parent .child {}</code>. This selects all elements with the class <code class=\"programming-highlighted-text\">child</code> that have a parent with the class <code class=\"programming-highlighted-text\">parent</code>. Test out some fancy selectors <a class=\"programming-highlighted-text\" href=\"https://www.w3schools.com/cssref/trysel.asp\">here</a>.
+</p>
+
 <br/><br/>
-Donec a sem massa. Sed elementum non ligula eu hendrerit. Vivamus vel condimentum ex. Integer nec mattis velit, eu maximus dui. Ut vel tortor ut massa tristique blandit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis fermentum facilisis nisi, ac placerat purus.
+
+<h2>CSS Pseudo-class Selectors</h2>
+<p>
+    There are classes, and there are selectors. Now there are pseudo-class selectors! Pseudo-class selectors are keywords added to your selectors. They tell the CSS to select the HTML element when it is <span class=\"programming-highlighted-text\">in a certain state</span> of being.
+</p>
+<br/>
+<p>
+    When we're selecting things normally, we say \"hey CSS file dude, make that paragraph blue when it's in its default state\". With pseudo-selectors, we can style elements when they are in the state of being hovered upon by the user or when it's being clicked by the user. Let's make a blue paragraph green on hover. How you ask? It would look something like this: <code class=\"programming-highlighted-text\">.text:hover { color: green; }</code>. Now, let's make it turn blue again when hovered: <code class=\"programming-highlighted-text\">.text:active { color: blue; }</code>. As you can see, we take the selector, add a <span class=\"programming-highlighted-text\">colon</span>, and then specify the state we want to style.
+</p>
+
 <br/><br/>
-Ut sit amet odio placerat, pretium tortor at, sagittis ante. Etiam tincidunt magna lorem, ut aliquam nunc posuere et. Donec id efficitur tellus. Nulla sapien arcu, sodales nec nunc quis, malesuada fermentum ante. In felis odio, dapibus vitae tellus vitae, hendrerit egestas leo. Aenean vel consequat mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum bibendum eu nisl ac scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis dignissim, sem sit amet efficitur accumsan, ligula ante gravida mauris, ac rhoncus neque nisl sit amet est. Morbi hendrerit fringilla diam, in malesuada lacus scelerisque dignissim."
+
+<h2>Adding CSS Properties</h2>
+<p>
+    As mentioned earlier, the CSS format is <code class=\"programming-highlighted-text\">selector { property: value; }</code>. We've got the selectors and pseudoselectors down. Now you're free to actually style those elements by adding properties and values inside the curly braces! There is a pretty good list of CSS properties <a class=\"programming-highlighted-text\" href=\"http://www.htmldog.com/references/css/properties/\">here</a>. See the below code for an example of some common properties. Try pasting the code into into your own HTML or CSS files to see what it looks like!
+</p>
+"
 ---

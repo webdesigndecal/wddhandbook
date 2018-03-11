@@ -22,19 +22,61 @@
 {% elsif include.week == 2 %}
 <pre>
     <code class="html">
+        &lt;!-- index.html --&gt;
+
         &lt;!DOCTYPE html&gt;
         &lt;html&gt;
             &lt;head&gt;
-                &lt;title&gt;HTML Basics II&lt;/title&gt;
+                &lt;title&gt;Introduction to CSS&lt;/title&gt;
+                &lt;link href="assets/css/styles.css" /&gt;
             &lt;/head&gt;
 
             &lt;body&gt;
-                &lt;div class="container"&gt;
-                    &lt;h1&gt;Heading&lt;/h1&gt;
-                    &lt;p&gt;This is a sentence inside paragraph tags.&lt;/p&gt;
+                &lt;div class="first-class both-classes"&gt;
+                    &lt;h1 id="citizen-one"&gt;First Class Citizen&lt;/h1&gt;
+                    &lt;h1 id="citizen-two"&gt;First Class Citizen&lt;/h1&gt;
+                    &lt;p&gt;I am a first class paragraph.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="second-class both-classes"&gt;
+                    &lt;h1 id="citizen-three"&gt;Second Class Citizen&lt;/h1&gt;
+                    &lt;a class="second-class-link"&gt;I am a second class link.&lt;/a&gt;
+                    &lt;a class="second-class-link"&gt;I am a second class link too.&lt;/a&gt;
                 &lt;/div&gt;
             &lt;/body&gt;
         &lt;/html&gt;
+    </code>
+
+    <code class="css">
+        /* styles.css */
+
+        .both-classes {
+            color: #fff;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .first-class {
+            background-color: gold;
+            font-size: 16px;
+        }
+
+        .second-class {
+            background-color: silver;
+            font-size: 14px;
+        }
+
+        #citizen-one {
+            font-size: 40px;
+            color: red;
+        }
+
+        .second-class-link {
+            color: pink;
+        }
+
+        .second-class-link:hover {
+            color: white;
+        }
     </code>
 </pre>
 
