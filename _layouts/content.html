@@ -5,9 +5,6 @@
     
     <!-- Custom CSS -->
     <link href="../../assets/css/main.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Custom Scripts -->
-    <script type="text/javascript" src="../../assets/js/prism.js"></script>
   </head>
   <body>
     <div class="handbook-home">
@@ -26,6 +23,41 @@
             <div class="content">
                 <h3>{{ page.heading }}</h3>
                 <p>{{ page.text }}</p>
+
+                <br/><br/>
+
+                {% if page.link-type == "design-link" %}
+                    <!-- show no code for design -->
+
+                {% else %}
+
+                    {% if page.week == "Week One" %}
+                        {% include code.html week=1 %}
+
+                    {% elsif page.week == "Week Two" %}
+                        {% include code.html week=2 %}
+
+                    {% elsif page.week == "Week Three" %}
+                        {% include code.html week=3 %}
+
+                    {% elsif page.week == "Week Four" %}
+                        {% include code.html week=4 %}
+
+                    {% elsif page.week == "Week Five" %}
+                        {% include code.html week=5 %}
+
+                    {% elsif page.week == "Week Six" %}
+                        {% include code.html week=6 %}
+
+                    {% elsif page.week == "Week Seven" %}
+                        {% include code.html week=7 %}
+
+                    {% elsif page.week == "Week Eight" %}
+                        {% include code.html week=8 %}
+
+                    {% endif %}
+
+                {% endif %}
             </div>
         </div>
     </div>
