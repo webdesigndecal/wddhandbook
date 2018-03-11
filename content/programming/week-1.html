@@ -1,17 +1,80 @@
 ---
 week: Week One
-title: HTML Basics
+title: The Structure of Websites
 layout: content
 switch-text: "Design"
 link-type: "programming-link"
 
-text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum nibh iaculis, volutpat velit et, convallis enim. Cras turpis magna, sollicitudin id lobortis ut, ornare sed ex. Nullam rutrum ultricies ultrices. Donec volutpat laoreet tellus, non commodo nisl finibus sit amet. Nullam aliquam consequat malesuada. Mauris tincidunt volutpat ipsum, facilisis tristique magna. Donec sed urna pretium, ultrices risus vitae, condimentum augue. Aenean ornare sem id velit efficitur sollicitudin. Suspendisse facilisis sem et eros lobortis iaculis.
+text: "
+<h2>Introduction</h2>
+<p>
+    We use the internet all the time, are our computers for most of the day, and have a bajillion apps at our fingertips. However, not everyone actually thinks about the <span class=\"programming-highlighted-text\">foundation that underlies the web</span>. Luckily, you are one of those that are curious enough to take the first step in discovering the amazing world of complexity within websites that bring you your cute cat videos.
+</p>
+
 <br/><br/>
-Donec a porta neque, a faucibus purus. Curabitur tincidunt congue egestas. Sed sit amet urna tempus, ultricies massa sit amet, maximus massa. Nullam molestie faucibus risus, a sodales nulla auctor sed. Nulla elementum sem nec tincidunt feugiat. Sed laoreet mollis enim, id pulvinar dolor vestibulum non. Praesent velit risus, placerat vel ipsum nec, facilisis rhoncus ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse at lectus et nisl sollicitudin auctor quis ac leo. Cras commodo magna libero. Curabitur pulvinar libero diam, eu hendrerit libero rhoncus sit amet.
+
+<h2>Core Languages</h2>
+<p>
+    Before we start coding, we have to understand what we're working with. The core languages of the web are <span class=\"programming-highlighted-text\">HTML, CSS and JS</span>. Let's briefly talk about each one in more depth.
+</p>
+
+<br/>
+
+<p>
+<span class=\"programming-highlighted-text\">HTML</span> is the structure of a website, a barebones skeleton telling the webpage what each thing on the page is. <span class=\"programming-highlighted-text\">CSS</span> is the design of the website. You give that skeleton some clothes and makeup with CSS, making your elements actually have shape and color and prettiness. Lastly, <span class=\"programming-highlighted-text\">JavaScript</span> is for function and interactivity. With JS, you can make all your buttons and forms actually do something other than sit there and be pretty.
+</p>
+
 <br/><br/>
-Pellentesque ullamcorper ultricies tempor. Aenean imperdiet turpis et metus aliquam consectetur. Praesent ullamcorper magna vel nibh volutpat, ac suscipit tortor vehicula. Quisque blandit massa vitae ex tristique, at placerat lorem dictum. Quisque in imperdiet nibh. Vivamus mollis pretium quam, at mattis ligula euismod et. Morbi tempus ipsum in tortor tincidunt dictum. Etiam consequat felis nec leo molestie tempus. Quisque id dignissim tellus, ac egestas augue. Nulla facilisi. Morbi ex ligula, eleifend vitae ornare in, bibendum a sapien. Curabitur eget cursus metus, non convallis erat. Nulla euismod, massa eu lacinia efficitur, elit felis laoreet tortor, quis interdum augue ligula ut lorem. Nullam metus arcu, condimentum vel tristique sagittis, gravida in metus.
+
+<h2>Understanding HTML</h2>
+<p>
+    Though each language is super interesting, we'll concentrate on HTML for the remainder of our time to really get to know the foundation that underlies all the fanciness of websites.
+</p>
+
+<br/>
+
+<p>
+    HTML stands for <span class=\"programming-highlighted-text\">Hypertext Markup Language</span>. It is really just a bunch of tags you put around your content to tell the browser what each thing is. You can write a ton of text, and it'll display on a webpage with no problem. Humans will likely know that it is a paragraph. However, the browser won't know what it is unless you put a bunch of <code class=\"programming-highlighted-text\">&lt;p&gt;</code> tags around it, telling it that all of that text is part of a paragraph.
+</p>
+
 <br/><br/>
-Donec a sem massa. Sed elementum non ligula eu hendrerit. Vivamus vel condimentum ex. Integer nec mattis velit, eu maximus dui. Ut vel tortor ut massa tristique blandit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis fermentum facilisis nisi, ac placerat purus.
+
+<h2>HTML Tags</h2>
+
+<p>
+    Let's go further into the topic of <span class=\"programming-highlighted-text\">tags</span>, which are necessary to understand pretty much anything else. The earlier example of a paragraph tag would actually not be so lonely. In HTML, it'd look like this: <code class=\"programming-highlighted-text\">&lt;p&gt;&lt;/p&gt;</code>. As you can see, it is a pair of tags. The first of the pair is the <span class=\"programming-highlighted-text\">opening tag</span> and the last is the <span class=\"programming-highlighted-text\">closing tag</span>, which must have a forward slash after the bracket. There are many, many tags in HTML and each one marks a different thing. You might want to tell the browser what thing is a header or nav or footer or link or button. There are tags for each of those that are easily Google-able. See a fairly comprehensive list <a class=\"programming-highlighted-text\" href=\"https://www.w3schools.com/tags/default.asp\">here</a>.
+</p>
+
+<br/>
+
+<p>
+    Though there are a lot of tags, the most important are probably <code class=\"programming-highlighted-text\">&lt;head&gt;</code>, <code class=\"programming-highlighted-text\">&lt;body&gt;</code>, and <code class=\"programming-highlighted-text\">&lt;div&gt;</code>.
+</p>
+
+<br/>
+
+<p>
+    The <span class=\"programming-highlighted-text\">head</span> is where you put the <span class=\"programming-highlighted-text\">title</span> of the website, not the one that shows up on the page, but the one that goes on your browser's little tab. It is where you <span class=\"programming-highlighted-text\">link to your CSS and JS files and fonts</span>.
+</p>
+
+<br/>
+
+<p>
+    The <span class=\"programming-highlighted-text\">body</span> is for everything else, the <span class=\"programming-highlighted-text\">site's actual content</span>.
+</p>
+
+<br/>
+
+<p>
+    The <span class=\"programming-highlighted-text\">div</span> tag is for div-iding up your content into boxes. It can wrap any content with an invisible box. They don't really mean anything, but can really help with structure, hierarchy, and as you'll later learn, styling.
+</p>
+
 <br/><br/>
-Ut sit amet odio placerat, pretium tortor at, sagittis ante. Etiam tincidunt magna lorem, ut aliquam nunc posuere et. Donec id efficitur tellus. Nulla sapien arcu, sodales nec nunc quis, malesuada fermentum ante. In felis odio, dapibus vitae tellus vitae, hendrerit egestas leo. Aenean vel consequat mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum bibendum eu nisl ac scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis dignissim, sem sit amet efficitur accumsan, ligula ante gravida mauris, ac rhoncus neque nisl sit amet est. Morbi hendrerit fringilla diam, in malesuada lacus scelerisque dignissim."
+
+<h2>Hierarchies</h2>
+
+<p>
+    In HTML, there is a <span class=\"programming-highlighted-text\">parent-child</span> hierarchy. You don't want to misunderstand this section because it is a fundamental part of HTML and of structuring websites. So, you know how each tag comes in pairs and has an opening and closing tag? Well, it turns out you can <span class=\"programming-highlighted-text\">put other tags between those opening and closing tags</span>. The tags that you put inside would be the <span class=\"programming-highlighted-text\">children</span> of those outer tags, and the outer tags, in turn, would be the <span class=\"programming-highlighted-text\">parents</span> of the inner tags.
+</p>
+"
 ---
