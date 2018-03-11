@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    {% include head.html %}
+    <head>
+        {% include head.html %}
 
-    <!-- Custom CSS -->
-    <link href="assets/css/main.min.css" rel="stylesheet" type="text/css">
-  </head>
+        <!-- Custom CSS -->
+        <link href="assets/css/main.min.css" rel="stylesheet" type="text/css">
+    </head>
   <body>
     <div class="handbook-home">
+        {% include home-nav.html %}
+
         <header class="home-header">
             <h1>WDD Handbook</h1>
-            <p class="uppercase centered-text lightened-text">Home | Spring 2018</p>
+            <p class="uppercase centered-text lightened-text">Home | {{ page.semester }}</p>
         </header>
 
-      <div class="selector-wrapper">
-        <div class="selector">
-            <a class="selector-item" href="directories/programming.html">
-                <p class="centered-text">Programming<br/>Handbook</p>
-                <img src="assets/images/wdd-logo-trans.png" />
-            </a>
-            <a class="selector-item" href="directories/design.html">
-                <p class="centered-text">Design<br/>Handbook</p>
-                <img src="assets/images/wdd-logo-trans.png" />
-            </a>
+        <div class="selector-wrapper">
+            <div class="selector">
+                <a class="selector-item" href="directories/programming.html">
+                    <p class="centered-text">Programming<br/>Handbook</p>
+                    <img src="assets/images/wdd-logo-trans.png" />
+                </a>
+                <a class="selector-item" href="directories/design.html">
+                    <p class="centered-text">Design<br/>Handbook</p>
+                    <img src="assets/images/wdd-logo-trans.png" />
+                </a>
+            </div>
         </div>
-      </div>
     </div>
   </body>
 </html>
