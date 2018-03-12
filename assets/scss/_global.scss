@@ -55,10 +55,18 @@ p {
   }
 }
 
+/* lists */
+
+ol, ul {
+  @include secondary-font;
+  margin-left: 20px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
 /* code block */
 
 code {
-  font-family: 'monospace';
   font-family: 'Source Code Pro', monospace;
   line-height: 1.25;
   font-size: 14px;

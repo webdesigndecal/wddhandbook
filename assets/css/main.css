@@ -5,8 +5,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body { line-height: 1; }
 
-ol, ul { list-style: none; }
-
 blockquote, q { quotes: none; }
 
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
@@ -34,8 +32,11 @@ h3 { font-size: 20px; }
 p { font-family: 'Karla', sans-serif; font-size: 16px; color: #333; letter-spacing: 0.5px; line-height: 1.25; }
 
 @media screen and (max-width: 1024px) { h1, h2, h3, h4, h5, h6, p { font-family: 'PT Sans', sans-serif; font-size: 16px; line-height: 1.5; color: #333; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: 10px; } }
+/* lists */
+ol, ul { font-family: 'Karla', sans-serif; font-size: 16px; color: #333; letter-spacing: 0.5px; line-height: 1.25; margin-left: 20px; padding-top: 10px; font-size: 14px; }
+
 /* code block */
-code { font-family: 'monospace'; font-family: 'Source Code Pro', monospace; line-height: 1.25; font-size: 14px; }
+code { font-family: 'Source Code Pro', monospace; line-height: 1.25; font-size: 14px; }
 @media screen and (max-width: 1024px) { code { font-size: 12px; } }
 
 /* links */
@@ -94,5 +95,9 @@ a.design-link:hover { color: #58b152; }
 @media screen and (max-width: 600px) { .content { width: 75vw; } }
 
 .content-section { margin-bottom: 5vh; }
+
+.content-img-wrapper { width: 100%; display: flex; justify-content: center; align-items: center; }
+
+.content-img { width: 60%; }
 
 /*# sourceMappingURL=main.css.map */

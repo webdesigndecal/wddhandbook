@@ -6,13 +6,59 @@ switch-text: "Design"
 link-type: "programming-link"
 semester: Spring 2018
 
-text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum nibh iaculis, volutpat velit et, convallis enim. Cras turpis magna, sollicitudin id lobortis ut, ornare sed ex. Nullam rutrum ultricies ultrices. Donec volutpat laoreet tellus, non commodo nisl finibus sit amet. Nullam aliquam consequat malesuada. Mauris tincidunt volutpat ipsum, facilisis tristique magna. Donec sed urna pretium, ultrices risus vitae, condimentum augue. Aenean ornare sem id velit efficitur sollicitudin. Suspendisse facilisis sem et eros lobortis iaculis.
+text: "
+<h2>Introduction</h2>
+<p>
+    With all our knowledge of CSS, we have still not yet finised the core concepts. A very fundamental part of CSS is its <span class=\"programming-highlighted-text\">box model</span>, which allows us to add spacing, create beautiful layouts, and shape our meaningless div boxes into something meaningful. Here, we will delve into this box model, talk about the display property, and learn how to use images.
+</p>
+
 <br/><br/>
-Donec a porta neque, a faucibus purus. Curabitur tincidunt congue egestas. Sed sit amet urna tempus, ultricies massa sit amet, maximus massa. Nullam molestie faucibus risus, a sodales nulla auctor sed. Nulla elementum sem nec tincidunt feugiat. Sed laoreet mollis enim, id pulvinar dolor vestibulum non. Praesent velit risus, placerat vel ipsum nec, facilisis rhoncus ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse at lectus et nisl sollicitudin auctor quis ac leo. Cras commodo magna libero. Curabitur pulvinar libero diam, eu hendrerit libero rhoncus sit amet.
+
+<h2>The Box Model</h2>
+<p>
+    So far, we have only worked with content, but there are some invisible spaces that surround that content. These spaces are called padding, border, and margin. <span class=\"programming-highlighted-text\">Padding</span> adds space around the <span class=\"programming-highlighted-text\">inside</span> of a box, within the border. The <span class=\"programming-highlighted-text\">border</span> is on the <span class=\"programming-highlighted-text\">edge</span> of the box. <span class=\"programming-highlighted-text\">Margins</span> add space surrounding the <span class=\"programming-highlighted-text\">outside</span> of the box.
+</p>
 <br/><br/>
-Pellentesque ullamcorper ultricies tempor. Aenean imperdiet turpis et metus aliquam consectetur. Praesent ullamcorper magna vel nibh volutpat, ac suscipit tortor vehicula. Quisque blandit massa vitae ex tristique, at placerat lorem dictum. Quisque in imperdiet nibh. Vivamus mollis pretium quam, at mattis ligula euismod et. Morbi tempus ipsum in tortor tincidunt dictum. Etiam consequat felis nec leo molestie tempus. Quisque id dignissim tellus, ac egestas augue. Nulla facilisi. Morbi ex ligula, eleifend vitae ornare in, bibendum a sapien. Curabitur eget cursus metus, non convallis erat. Nulla euismod, massa eu lacinia efficitur, elit felis laoreet tortor, quis interdum augue ligula ut lorem. Nullam metus arcu, condimentum vel tristique sagittis, gravida in metus.
+<div class=\"content-img-wrapper\">
+    <img class=\"content-img\" src=\"../../assets/images/box-model.png\" />
+</div>
 <br/><br/>
-Donec a sem massa. Sed elementum non ligula eu hendrerit. Vivamus vel condimentum ex. Integer nec mattis velit, eu maximus dui. Ut vel tortor ut massa tristique blandit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis fermentum facilisis nisi, ac placerat purus.
+<p>
+    Let's get into how to use CSS to edit the amount of padding, borders, and margins for each element in your HTML. It's usually a simple addition of the margin, border, or padding property. For example, <code class=\"programming-highlighted-text\">.div-one { margin-top: 10px; }</code> adds 10 pixels of margin on top of the content box. To add spacing within the border we use padding: <code class=\"programming-highlighted-text\">.div-one { padding-bottom: 20px; }</code> adds 20 pixels of padding on the bottom. Finally, <code class=\"programming-highlighted-text\">.div-one { border: 1px solid black }</code> adds a border with a width of 1 pixel to the content box.
+</p>
+<br/>
+<h3>Shorthands</h3>
+<p>
+    There are a number of shorthands for padding, margin, and borders so that you don't have to specify <code class=\"programming-highlighted-text\">padding-left</code> or <code class=\"programming-highlighted-text\">margin-bottom</code> or <code class=\"programming-highlighted-text\">border-right</code> every time you want to add one of those to multiple sides of your content box.
+    <ul>
+        <li><code class=\"programming-highlighted-text\">.div-one { margin: 10px; }</code> adds 10px of margin to all sides of div-one</li>
+        <li><code class=\"programming-highlighted-text\">.div-one { margin: 5px 10px; }</code> adds 5px of margin to top and bottom and 10px to left and right</li>
+        <li><code class=\"programming-highlighted-text\">.div-one { margin: 5px 10px 15px 20px; }</code> adds margin in this order: top right bottom left</li>
+        <li><code class=\"programming-highlighted-text\">.div-one { padding: 10px; }</code> adds 10px of padding to all sides of div-one</li>
+        <li><code class=\"programming-highlighted-text\">.div-one { padding: 5px 10px; }</code> adds 5px of padding to top and bottom and 10px to left and right</li>
+        <li><code class=\"programming-highlighted-text\">.div-one { padding: 5px 10px 15px 20px; }</code> adds 10px of padding to all sides of div-one</li>
+        <li><code class=\"programming-highlighted-text\">.div-one { border: 1px solid blue; }</code> adds blue border of 1px to all sides</li>
+        <li><code class=\"programming-highlighted-text\">.div-one { border: 1px 2px 3px 4px; }</code> adds borders in this order: top right bottom left</li>
+    </ul>
+</p>
+
 <br/><br/>
-Ut sit amet odio placerat, pretium tortor at, sagittis ante. Etiam tincidunt magna lorem, ut aliquam nunc posuere et. Donec id efficitur tellus. Nulla sapien arcu, sodales nec nunc quis, malesuada fermentum ante. In felis odio, dapibus vitae tellus vitae, hendrerit egestas leo. Aenean vel consequat mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum bibendum eu nisl ac scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis dignissim, sem sit amet efficitur accumsan, ligula ante gravida mauris, ac rhoncus neque nisl sit amet est. Morbi hendrerit fringilla diam, in malesuada lacus scelerisque dignissim."
+
+<h2>Display Property</h2>
+<p>
+    Now that we understand the box model, we can start thinking about different kinds of displays. The three main ones we'll go over for this week are <code class=\"programming-highlighted-text\">display: block</code>, <code class=\"programming-highlighted-text\">display: none</code>, and <code class=\"programming-highlighted-text\">display: inline-block</code>. <code class=\"programming-highlighted-text\">display: block</code> makes content stacked on top of each other vertically. <code class=\"programming-highlighted-text\">display: none</code> removes content from the document and takes them out of the flow of the document as well. In other words, the content will visually disappear and not take up space anymore. <code class=\"programming-highlighted-text\">display: inline-block</code> puts content next to each other on the same row.
+</p>
+<br/>
+<h3>Using Floats</h3>
+<p>
+    As an alternative to using <code class=\"programming-highlighted-text\">display: inline-block</code> to position elements next to each other, we can use the <code class=\"programming-highlighted-text\">float</code> property instead. To float items to the left possible of their container, use <code class=\"programming-highlighted-text\">float: left</code>. To float items to the farthest right possible of their container, use <code class=\"programming-highlighted-text\">float: right</code>. In order to stop an element from floating after you've floated everything you've wanted, use <code class=\"programming-highlighted-text\">clear: left</code>, <code class=\"programming-highlighted-text\">clear: right</code>, or <code class=\"programming-highlighted-text\">clear: both</code>.
+</p>
+
+<br/><br/>
+
+<h2>Adding Images</h2>
+<p>
+    Images can really spice up your website and bring it to life. There are actually two places you can add an image, in the HTML and in the CSS. If the image has a <span class=\"programming-highlighted-text\">meaning</span>, like a logo or gallery, it would be better to add it to the HTML using the <code class=\"programming-highlighted-text\">&lt;img src=\"url_to_image\" /&gt;</code> tag. If the image is merely <span class=\"programming-highlighted-text\">decorative</span>, like a patterned background image, you can use the CSS to add it. The height and width of images can be changed in the CSS, whether it is in the HTML or the CSS, using the <code class=\"programming-highlighted-text\">height</code> and <code class=\"programming-highlighted-text\">width</code> CSS properties. To change a background image size, use the <code class=\"programming-highlighted-text\">background-size</code> property.
+</p>
+"
 ---

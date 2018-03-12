@@ -19,3 +19,14 @@
 .content-section {
     margin-bottom: 5vh;
 }
+
+.content-img-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-img {
+    width: 60%;
+}
