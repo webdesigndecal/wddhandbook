@@ -96,7 +96,8 @@ a.design-link:hover { color: #58b152; }
 
 .content-section { margin-bottom: 5vh; }
 
-.content-img-wrapper { width: 100%; display: flex; justify-content: center; align-items: center; }
+.content-img-wrapper { width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.content-img-wrapper .caption { margin-top: 20px; font-size: 12px; color: #7a8899; }
 
 .content-img { width: 60%; }
 
