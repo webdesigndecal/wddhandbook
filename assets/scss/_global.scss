@@ -70,6 +70,9 @@ code {
   font-family: 'Source Code Pro', monospace;
   line-height: 1.25;
   font-size: 14px;
+  background-color: $lighter-gray;
+  border-radius: 3px;
+  padding: 1px 3px;
 
   @media screen and (max-width: 1024px) {
     font-size: 12px;
