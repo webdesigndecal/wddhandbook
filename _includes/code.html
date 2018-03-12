@@ -1,3 +1,5 @@
+<h2>Example Code</h2>
+
 {% if include.week == 1 %}
 <pre>
     <code class="html">
@@ -123,20 +125,53 @@
 {% elsif include.week == 4 %}
 <pre>
     <code class="html">
+        &lt;!-- index.html --&gt;
+
         &lt;!DOCTYPE html&gt;
         &lt;html&gt;
             &lt;head&gt;
-                &lt;title&gt;More CSS&lt;/title&gt;
+                &lt;title&gt;CSS Positioning&lt;/title&gt;
                 &lt;link href="assets/css/styles.css" /&gt;
             &lt;/head&gt;
 
             &lt;body&gt;
-                &lt;div class="container"&gt;
-                    &lt;h1&gt;Heading&lt;/h1&gt;
-                    &lt;p&gt;This is a sentence inside paragraph tags.&lt;/p&gt;
+                &lt;div class="parent-container"&gt;
+                    &lt;nav class="child-nav"&gt;Heading&lt;/nav&gt;
+                    &lt;p class="child-item"&gt;Image caption&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/body&gt;
         &lt;/html&gt;
+    </code>
+    <code class="css">
+        /* styles.css */
+
+        .parent-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+        }
+
+        .child-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            z-index: 1;
+        }
+
+        .child-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: pink;
+            z-index: 2;
+        }
     </code>
 </pre>
 
