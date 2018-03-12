@@ -45,22 +45,28 @@ text: "
 <p>
     Let's go further into the topic of <span class=\"programming-highlighted-text\">tags</span>, which are necessary to understand pretty much anything else. The earlier example of a paragraph tag would actually not be so lonely. In HTML, it'd look like this: <code class=\"programming-highlighted-text\">&lt;p&gt;&lt;/p&gt;</code>. As you can see, it is a pair of tags. The first of the pair is the <span class=\"programming-highlighted-text\">opening tag</span> and the last is the <span class=\"programming-highlighted-text\">closing tag</span>, which must have a forward slash after the bracket. There are many, many tags in HTML and each one marks a different thing. You might want to tell the browser what thing is a header or nav or footer or link or button. There are tags for each of those that are easily Google-able. See a fairly comprehensive list <a class=\"programming-highlighted-text\" href=\"https://www.w3schools.com/tags/default.asp\">here</a>.
 </p>
-<br/>
+<br/><br/>
+<div class=\"content-img-wrapper\">
+    <img class=\"content-img\" src=\"../../assets/images/tags.png\" style=\"width: 80%\" />
+    <p class=\"caption\">Image source: http://www.htmlandcssbook.com/</p>
+</div>
+<br/><br/>
+<h3>The Big Three</h3>
 <p>
-    Though there are a lot of tags, the most important are probably <code class=\"programming-highlighted-text\">&lt;head&gt;</code>, <code class=\"programming-highlighted-text\">&lt;body&gt;</code>, and <code class=\"programming-highlighted-text\">&lt;div&gt;</code>.
+    Though there are a lot of tags, the most important are probably <code class=\"programming-highlighted-text\">&lt;head&gt;</code>, <code class=\"programming-highlighted-text\">&lt;body&gt;</code>, and <code class=\"programming-highlighted-text\">&lt;div&gt;</code>, which are used in almost every webpage. The former two are pretty much always required in any HTML file because they contain pretty much all data and content.
 </p>
 <br/>
-<p>
-    The <span class=\"programming-highlighted-text\">head</span> is where you put the <span class=\"programming-highlighted-text\">title</span> of the website, not the one that shows up on the page, but the one that goes on your browser's little tab. It is where you <span class=\"programming-highlighted-text\">link to your CSS and JS files and fonts</span>.
-</p>
-<br/>
-<p>
-    The <span class=\"programming-highlighted-text\">body</span> is for everything else, the <span class=\"programming-highlighted-text\">site's actual content</span>.
-</p>
-<br/>
-<p>
-    The <span class=\"programming-highlighted-text\">div</span> tag is for div-iding up your content into boxes. It can wrap any content with an invisible box. They don't really mean anything, but can really help with structure, hierarchy, and as you'll later learn, styling.
-</p>
+<ul>
+    <li>
+        The <span class=\"programming-highlighted-text\">head</span> is where you put the <span class=\"programming-highlighted-text\">title</span> of the website, not the one that shows up on the page, but the one that goes on your browser's little tab. It is where you <span class=\"programming-highlighted-text\">link to your CSS and JS files and fonts</span>.
+    </li>
+    <li>
+        The <span class=\"programming-highlighted-text\">body</span> is for everything else, the <span class=\"programming-highlighted-text\">site's actual content</span>.
+    </li>
+    <li>
+        The <span class=\"programming-highlighted-text\">div</span> tag is for div-iding up your content into boxes. It can wrap any content with an invisible box. They don't really mean anything, but can really help with structure, hierarchy, and as you'll later learn, styling.
+    </li>
+</ul>
 
 <br/><br/>
 
@@ -68,6 +74,22 @@ text: "
 
 <p>
     In HTML, there is a <span class=\"programming-highlighted-text\">parent-child</span> hierarchy. You don't want to misunderstand this section because it is a fundamental part of HTML and of structuring websites. So, you know how each tag comes in pairs and has an opening and closing tag? Well, it turns out you can <span class=\"programming-highlighted-text\">put other tags between those opening and closing tags</span>. The tags that you put inside would be the <span class=\"programming-highlighted-text\">children</span> of those outer tags, and the outer tags, in turn, would be the <span class=\"programming-highlighted-text\">parents</span> of the inner tags.
+</p>
+
+<br/><br/>
+
+<h2>Relative and Absolute Links</h2>
+
+<p>
+    Very soon, you will need to <span class=\"programming-highlighted-text\">link your HTML files to your CSS files</span>, so here we will discuss linking and paths. We will also take this opportunity to talk about linking to external sites.
+</p>
+<br/>
+<p>
+    A <span class=\"programming-highlighted-text\">relative path</span> is a path that tells the computer how to get from the current file you are working in to the file to want to get to. It specifies the path <span class=\"programming-highlighted-text\">relative</span> to where you are currently at. An example of this would be: <code class=\"programming-highlighted-text\">../images/pic.png</code>. This takes you out of the folder your current file is in and into the images folder where pic.png is.
+</p>
+<br/>
+<p>
+    An <span class=\"programming-highlighted-text\">absolute path</span> is a complete path that should lead the computer to where it needs to go no matter what current folder or file you are working in. An example of this: <code class=\"programming-highlighted-text\">/Users/Zach/Desktop/images/pic.png</code>. All URLs are also absolute links: <code class=\"programming-highlighted-text\">http://www.wdd.io</code>.
 </p>
 "
 ---
