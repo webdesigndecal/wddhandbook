@@ -12,3 +12,5 @@ $primary-light: #fcfcfc;
 // other
 $gray: #d3d3d3;
 $lighter-gray: lighten($gray, 10%);
+$lightest-gray: lighten($gray, 15%);
+$lighter-blue: lighten($primary-blue, 40%);

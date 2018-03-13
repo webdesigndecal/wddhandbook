@@ -60,6 +60,9 @@ a.design-link:hover { color: #58b152; }
 
 .design-highlighted-text { color: #7ac175; }
 
+.sidebar { position: fixed; top: 0; right: 0; height: 100vh; width: 20vw; background-color: #f4f7fa; overflow-y: scroll; }
+@media (max-width: 768px) { .sidebar { display: none; } }
+
 .selector-wrapper { width: 100vw; display: flex; flex-direction: column; align-items: center; }
 
 .selector { display: flex; flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: 4vh; }
@@ -89,7 +92,8 @@ a.design-link:hover { color: #58b152; }
 
 .topic-item { margin-bottom: 5vh; }
 
-.content-wrapper { width: 100vw; display: flex; flex-direction: column; align-items: center; }
+.content-wrapper { width: 80vw; display: flex; flex-direction: column; align-items: center; }
+@media (max-width: 768px) { .content-wrapper { width: 100vw; } }
 
 .content { width: 60vw; }
 @media screen and (max-width: 600px) { .content { width: 75vw; } }

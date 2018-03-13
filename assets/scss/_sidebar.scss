@@ -1,0 +1,16 @@
+@import "variables",
+        "mixins";
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20vw;
+    background-color: $lighter-blue;
+    overflow-y: scroll;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
