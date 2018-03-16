@@ -60,7 +60,7 @@ a.design-link:hover { color: #58b152; }
 
 .design-highlighted-text { color: #7ac175; }
 
-.sidebar { position: fixed; top: 0; right: 0; height: 100vh; width: 25vw; background-color: #f4f7fa; overflow-y: scroll; padding: 10vh 25px; display: flex; flex-direction: column; }
+.sidebar { position: fixed; top: 0; right: 0; height: 100vh; width: 25vw; background-color: #f4f7fa; overflow-y: scroll; padding: 10vh 35px; display: flex; flex-direction: column; }
 .sidebar h3 { margin: 20px 0; padding-left: 20px; }
 .sidebar .p-header { border-left: 5px solid #6493be; }
 .sidebar .d-header { border-left: 5px solid #7ac175; }
@@ -100,7 +100,7 @@ a.design-link:hover { color: #58b152; }
 .content-wrapper { width: 75vw; display: flex; flex-direction: column; align-items: center; }
 @media (max-width: 768px) { .content-wrapper { width: 100vw; } }
 
-.content { width: 65vw; }
+.content { width: 60vw; }
 @media screen and (max-width: 600px) { .content { width: 75vw; } }
 
 .content-section { margin-bottom: 5vh; }
