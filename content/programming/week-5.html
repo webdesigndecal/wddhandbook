@@ -6,13 +6,54 @@ switch-text: "Design"
 link-type: "programming-link"
 semester: Spring 2018
 
-text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum nibh iaculis, volutpat velit et, convallis enim. Cras turpis magna, sollicitudin id lobortis ut, ornare sed ex. Nullam rutrum ultricies ultrices. Donec volutpat laoreet tellus, non commodo nisl finibus sit amet. Nullam aliquam consequat malesuada. Mauris tincidunt volutpat ipsum, facilisis tristique magna. Donec sed urna pretium, ultrices risus vitae, condimentum augue. Aenean ornare sem id velit efficitur sollicitudin. Suspendisse facilisis sem et eros lobortis iaculis.
+text: "
+<h2>Introduction</h2>
+<p>
+    Understanding how to lay things out with positioning is only the first step to really understanding CSS layouts. Through learning how to <span class=\"programming-highlighted-text\">center elements</span> on a webpage, we'll learn other methods of laying out elements. Then, we'll delve even deeper, into the modern CSS3 features: <span class=\"programming-highlighted-text\">flexbox and CSS grids</span>. These amazing features give us all we need to position elements exactly the way we want to, efficiently, without the need for Bootstrap.
+</p>
+
 <br/><br/>
-Donec a porta neque, a faucibus purus. Curabitur tincidunt congue egestas. Sed sit amet urna tempus, ultricies massa sit amet, maximus massa. Nullam molestie faucibus risus, a sodales nulla auctor sed. Nulla elementum sem nec tincidunt feugiat. Sed laoreet mollis enim, id pulvinar dolor vestibulum non. Praesent velit risus, placerat vel ipsum nec, facilisis rhoncus ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse at lectus et nisl sollicitudin auctor quis ac leo. Cras commodo magna libero. Curabitur pulvinar libero diam, eu hendrerit libero rhoncus sit amet.
+
+<h2>Centering</h2>
+<p>
+    There are many ways to center things, but here, we will go through three that do not use flexbox or CSS grids. Rather, they will make use of <span class=\"programming-highlighted-text\">text alignment, margins &amp; padding, positioning, and translation</span>. These are <span class=\"programming-highlighted-text\">not encouraged</span> to be used in centering in too many cases now that flexbox and grids exist, but they're good to know and help with learning important CSS properties.
+</p>
+<br/>
+<h3>Text Alignment</h3>
+<p>
+    Counterintuitively, <code class=\"programming-highlighted-text\">text-align: center</code> is not used only for text. It can be used to horizontally center any element with a <code class=\"programming-highlighted-text\">display</code> of <code class=\"programming-highlighted-text\">inline-block</code> or <code class=\"programming-highlighted-text\">inline</code>. There is also <code class=\"programming-highlighted-text\">text-align: left</code> and <code class=\"programming-highlighted-text\">text-align: right</code>, which align inline items to the left or right, as you would expect.
+</p>
+<br/>
+<h3>Margins &amp; Padding</h3>
+<p>
+    Though this section is about both margins and padding, we will only focus on margins as padding is used in nearly the same way. Margins add a specific about of space between elements. If the <span class=\"programming-highlighted-text\">same amount of spacing</span> is specified on the left and right, the element will be <span class=\"programming-highlighted-text\">horizontally centered</span>. If the same amount of spacing is specified on the top and bottom, the element will be <span class=\"programming-highlighted-text\">vertically centered</span>. For example, if the container was 200 by 200 pixels and a picture (or other content) inside of it was 100 by 100 pixels, adding the style <code class=\"programming-highlighted-text\">margin: 50px</code>, which adds margins to all sides of the picture, will center the picture horizontally and vertically. Alternatively, <code class=\"programming-highlighted-text\">margin: 0 auto</code> can be used for horizontally centering an element with a width, height, and display specified inside a parent element with a width and height.
+</p>
+<br/>
+<h3>Positioning</h3>
+<p>
+    As we saw in the last week, using <span class=\"programming-highlighted-text\">absolute positioning</span>, we can forcibly position elements exactly where we want them to be. This method of centering would also require <span class=\"programming-highlighted-text\">pixel or percentage calculations</span>, similar to margins. If we merely position an element absolutely and then add <code class=\"programming-highlighted-text\">left: 50%</code> and <code class=\"programming-highlighted-text\">top: 50%</code>, that would make the element <span class=\"programming-highlighted-text\">off-center</span> as it pushes the <span class=\"programming-highlighted-text\">edges</span> of the element down and <span class=\"programming-highlighted-text\">does not use the middle of the element as the point of reference</span> (in other words, the top of the element will have been pushed down 50% with the element itself hanging below the 50% mark).
+</p>
+<br/>
+<p>
+    Therefore, if the height and the width of the element is 20% of those of its parent element, we'd have to use <code class=\"programming-highlighted-text\">top: 40%</code> and <code class=\"programming-highlighted-text\">left: 40%</code> because we take up 40% of the parent's space on both sides of the elemeent and 20% for the element itself: 40% + 20% + 40% = 100%. Note that these calculations would <span class=\"programming-highlighted-text\">change yet again</span> and become more <span class=\"programming-highlighted-text\">complicated</span> if either the child or parent elements <span class=\"programming-highlighted-text\">had padding or margins</span>, but we won't get into that. With pixels instead of percentages, the concept is the same.
+</p>
+<br/>
+<h3>Translation</h3>
+<p>
+    To use translation, we'll have to use the <code class=\"programming-highlighted-text\">transform</code> property of CSS with a value of <code class=\"programming-highlighted-text\">translateX(amt) translateY(amt)</code>, where <code class=\"programming-highlighted-text\">amt</code> is replaced with a pixel or percent value. In this case, the <span class=\"programming-highlighted-text\">midpoint</span> of the element being translated is used instead of the edges like with positioning. So, adding <code class=\"programming-highlighted-text\">transform: translateX(50%) translateY(50%)</code> does center the element in this case.
+</p>
+
 <br/><br/>
-Pellentesque ullamcorper ultricies tempor. Aenean imperdiet turpis et metus aliquam consectetur. Praesent ullamcorper magna vel nibh volutpat, ac suscipit tortor vehicula. Quisque blandit massa vitae ex tristique, at placerat lorem dictum. Quisque in imperdiet nibh. Vivamus mollis pretium quam, at mattis ligula euismod et. Morbi tempus ipsum in tortor tincidunt dictum. Etiam consequat felis nec leo molestie tempus. Quisque id dignissim tellus, ac egestas augue. Nulla facilisi. Morbi ex ligula, eleifend vitae ornare in, bibendum a sapien. Curabitur eget cursus metus, non convallis erat. Nulla euismod, massa eu lacinia efficitur, elit felis laoreet tortor, quis interdum augue ligula ut lorem. Nullam metus arcu, condimentum vel tristique sagittis, gravida in metus.
-<br/><br/>
-Donec a sem massa. Sed elementum non ligula eu hendrerit. Vivamus vel condimentum ex. Integer nec mattis velit, eu maximus dui. Ut vel tortor ut massa tristique blandit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis fermentum facilisis nisi, ac placerat purus.
-<br/><br/>
-Ut sit amet odio placerat, pretium tortor at, sagittis ante. Etiam tincidunt magna lorem, ut aliquam nunc posuere et. Donec id efficitur tellus. Nulla sapien arcu, sodales nec nunc quis, malesuada fermentum ante. In felis odio, dapibus vitae tellus vitae, hendrerit egestas leo. Aenean vel consequat mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum bibendum eu nisl ac scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis dignissim, sem sit amet efficitur accumsan, ligula ante gravida mauris, ac rhoncus neque nisl sit amet est. Morbi hendrerit fringilla diam, in malesuada lacus scelerisque dignissim."
+
+<h2>Flexbox</h2>
+<p>
+    <h2>Flexbox</h2>
+<p>
+    That was a mouthful. All of the above information is a lot to take in, but luckily, if you use flexbox, <span class=\"programming-highlighted-text\">you won't have to remember most (or any) of it</span>! The name flexbox is derived from \"flexible box\", which is exactly what flexbox provides you with. These flexboxes make it super easy to handle your layouts, <span class=\"programming-highlighted-text\">without the need to remember a ton</span> of non-English words and rules within rules.
+</p>
+<br/>
+<p>
+    
+</p>
+"
 ---
