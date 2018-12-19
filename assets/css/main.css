@@ -111,4 +111,6 @@ a.design-link:hover { color: #58b152; }
 
 .content-img { width: 60%; }
 
+.content-img.smaller { width: 50%; }
+
 /*# sourceMappingURL=main.css.map */

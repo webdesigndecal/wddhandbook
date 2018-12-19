@@ -1,6 +1,6 @@
 ---
 week: Week Five
-title: Centering, Flexbox, and Grids
+title: Centering and Flexbox
 layout: content
 switch-text: "Design"
 link-type: "programming-link"
@@ -9,7 +9,7 @@ semester: Spring 2018
 text: "
 <h2>Introduction</h2>
 <p>
-    Understanding how to lay things out with positioning is only the first step to really understanding CSS layouts. Through learning how to <span class=\"programming-highlighted-text\">center elements</span> on a webpage, we'll learn other methods of laying out elements. Then, we'll delve even deeper, into the modern CSS3 features: <span class=\"programming-highlighted-text\">flexbox and CSS grids</span>. These amazing features give us all we need to position elements exactly the way we want to, efficiently, without the need for Bootstrap.
+    Understanding how to lay things out with positioning is only the first step to really understanding CSS layouts. Through learning how to <span class=\"programming-highlighted-text\">center elements</span> on a webpage, we'll learn other methods of laying out elements. Then, we'll delve even deeper, into the modern CSS3 features, specifically <span class=\"programming-highlighted-text\">flexbox</span>. This amazing feature gives us all we need to position elements exactly the way we want to, efficiently, without the need for Bootstrap (especially if you learn CSS grids in addition to flexbox, but we will not delve into it in this semester's handbook).
 </p>
 
 <br/><br/>
@@ -26,18 +26,28 @@ text: "
 <br/>
 <h3>Margins &amp; Padding</h3>
 <p>
-    Though this section is about both margins and padding, we will only focus on margins as padding is used in nearly the same way. Margins add a specific about of space between elements. If the <span class=\"programming-highlighted-text\">same amount of spacing</span> is specified on the left and right, the element will be <span class=\"programming-highlighted-text\">horizontally centered</span>. If the same amount of spacing is specified on the top and bottom, the element will be <span class=\"programming-highlighted-text\">vertically centered</span>. For example, if the container was 200 by 200 pixels and a picture (or other content) inside of it was 100 by 100 pixels, adding the style <code class=\"programming-highlighted-text\">margin: 50px</code>, which adds margins to all sides of the picture, will center the picture horizontally and vertically. Alternatively, <code class=\"programming-highlighted-text\">margin: 0 auto</code> can be used for horizontally centering an element with a width, height, and display specified inside a parent element with a width and height.
+    Though this section is about both margins and padding, we will only focus on margins as padding is used in nearly the same way. Margins add a specific about of space between elements. If the <span class=\"programming-highlighted-text\">same amount of spacing</span> is specified on the left and right, the element will be <span class=\"programming-highlighted-text\">horizontally centered</span>. If the same amount of spacing is specified on the top and bottom, the element will be <span class=\"programming-highlighted-text\">vertically centered</span>. For example, if the container was 200 by 200 pixels and a picture (or other content) inside of it was 50 by 50 pixels, adding the style <code class=\"programming-highlighted-text\">margin: 75px</code>, which adds margins to all sides of the picture, will center the picture horizontally and vertically. Alternatively, <code class=\"programming-highlighted-text\">margin: 0 auto</code> can be used for horizontally centering an element with a width, height, and display specified inside a parent element with a width and height.
 </p>
-<br/>
+<br/><br/>
+<div class=\"content-img-wrapper\">
+    <img class=\"content-img\" src=\"../../assets/images/margin-centering.png\" />
+    <p class=\"caption\">Image source: WDD Lecture 5, Spring 2018</p>
+</div>
+<br/><br/>
 <h3>Positioning</h3>
 <p>
     As we saw in the last week, using <span class=\"programming-highlighted-text\">absolute positioning</span>, we can forcibly position elements exactly where we want them to be. This method of centering would also require <span class=\"programming-highlighted-text\">pixel or percentage calculations</span>, similar to margins. If we merely position an element absolutely and then add <code class=\"programming-highlighted-text\">left: 50%</code> and <code class=\"programming-highlighted-text\">top: 50%</code>, that would make the element <span class=\"programming-highlighted-text\">off-center</span> as it pushes the <span class=\"programming-highlighted-text\">edges</span> of the element down and <span class=\"programming-highlighted-text\">does not use the middle of the element as the point of reference</span> (in other words, the top of the element will have been pushed down 50% with the element itself hanging below the 50% mark).
 </p>
 <br/>
 <p>
-    Therefore, if the height and the width of the element is 20% of those of its parent element, we'd have to use <code class=\"programming-highlighted-text\">top: 40%</code> and <code class=\"programming-highlighted-text\">left: 40%</code> because we take up 40% of the parent's space on both sides of the elemeent and 20% for the element itself: 40% + 20% + 40% = 100%. Note that these calculations would <span class=\"programming-highlighted-text\">change yet again</span> and become more <span class=\"programming-highlighted-text\">complicated</span> if either the child or parent elements <span class=\"programming-highlighted-text\">had padding or margins</span>, but we won't get into that. With pixels instead of percentages, the concept is the same.
+    Therefore, if the height and the width of the element is 20% of those of its parent element, we'd have to use <code class=\"programming-highlighted-text\">top: 40%</code> and <code class=\"programming-highlighted-text\">left: 40%</code> because we take up 40% of the parent's space on both sides of the elemeent and 20% for the element itself: 40% + 20% + 40% = 100%. Note that these calculations would <span class=\"programming-highlighted-text\">change yet again</span> and become more <span class=\"programming-highlighted-text\">complicated</span> if either the child or parent elements <span class=\"programming-highlighted-text\">had padding or margins</span>, but we won't get into that. With pixels instead of percentages, the concept is the same in that spacing will have to be calculated as parts of the total.
 </p>
-<br/>
+<br/><br/>
+<div class=\"content-img-wrapper\">
+    <img class=\"content-img\" src=\"../../assets/images/position-centering.png\" />
+    <p class=\"caption\">Image source: WDD Lecture 5, Spring 2018</p>
+</div>
+<br/><br/>
 <h3>Translation</h3>
 <p>
     To use translation, we'll have to use the <code class=\"programming-highlighted-text\">transform</code> property of CSS with a value of <code class=\"programming-highlighted-text\">translateX(amt) translateY(amt)</code>, where <code class=\"programming-highlighted-text\">amt</code> is replaced with a pixel or percent value. In this case, the <span class=\"programming-highlighted-text\">midpoint</span> of the element being translated is used instead of the edges like with positioning. So, adding <code class=\"programming-highlighted-text\">transform: translateX(50%) translateY(50%)</code> does center the element in this case.
@@ -50,8 +60,51 @@ text: "
     That was a mouthful. All of the above information is a lot to take in, but luckily, if you use flexbox, <span class=\"programming-highlighted-text\">you won't have to remember most (or any) of it</span>! The name flexbox is derived from \"flexible box\", which is exactly what flexbox provides you with. These flexboxes make it super easy to handle your layouts, <span class=\"programming-highlighted-text\">without the need to remember a ton</span> of non-English words and rules within rules.
 </p>
 <br/>
+<h3>Set Display</h3>
 <p>
-    To use a flexbox, the first thing we have to do is set the display for the element to <code class=\"programming-highlighted-text\">display: flex</code>.
+    To use a flexbox, the first thing we have to do is set the display for the element to <code class=\"programming-highlighted-text\">display: flex</code>. This tells the browser that <span class=\"programming-highlighted-text\">the particular element is now a flexbox</span> and can have its content positioned using flexbox properties and values. The first three fundamental, basic properties are <code class=\"programming-highlighted-text\">flex-direction</code>, <code class=\"programming-highlighted-text\">justify-content</code>, and <code class=\"programming-highlighted-text\">align-items</code>.
+</p>
+<br/>
+<h3>Flex Direction</h3>
+<p>
+    We'll start with <code class=\"programming-highlighted-text\">flex-direction</code>, which can be set to <code class=\"programming-highlighted-text\">column</code> or <code class=\"programming-highlighted-text\">row</code>. Setting <code class=\"programming-highlighted-text\">flex-direction: column</code> will align elements within your flexbox element <span class=\"programming-highlighted-text\">stacked one on top of another</span>. Using <code class=\"programming-highlighted-text\">row</code> will align the contents of your container <span class=\"programming-highlighted-text\">next to each other</span> instead. Beyond simple layout differences, using <code class=\"programming-highlighted-text\">column</code> versus <code class=\"programming-highlighted-text\">row</code> values will also change the functionality of <code class=\"programming-highlighted-text\">justify-content</code> and <code class=\"programming-highlighted-text\">align-items</code>, but we'll talk about that more in a second.
+</p>
+<br/><br/>
+<div class=\"content-img-wrapper\">
+    <img class=\"content-img\" src=\"../../assets/images/flex-direction.gif\" />
+    <p class=\"caption\">Image source: https://medium.freecodecamp.org/an-animated-guide-to-flexbox</p>
+</div>
+<br/><br/>
+<h3>Content Alignment</h3>
+<p>
+    To begin with, let's talk about <code class=\"programming-highlighted-text\">justify-content</code> and <code class=\"programming-highlighted-text\">align-items</code> in the context of <code class=\"programming-highlighted-text\">flex-direction: row</code> (which by the way is the default direction of flexboxes in most browsers). In this context, <code class=\"programming-highlighted-text\">justify-content</code> determines the <span class=\"programming-highlighted-text\">horizontal layout</span> of elements and <code class=\"programming-highlighted-text\">align-items</code> determines the <span class=\"programming-highlighted-text\">vertical layout</span>.
+</p>
+<br/>
+<p>
+    The three basic values this property can be set to are <code class=\"programming-highlighted-text\">flex-start</code>, <code class=\"programming-highlighted-text\">flex-end</code>, and <code class=\"programming-highlighted-text\">center</code> though there are more possibilities that will be explored later (catch a sneak peak in the below graphic). Intuitively, <code class=\"programming-highlighted-text\">flex-start</code> positions items at the beginning of the flexbox, which would be at the left, horizontally (<code class=\"programming-highlighted-text\">justify-content: flex-start</code>) and at the top, vertically (<code class=\"programming-highlighted-text\">align-items: flex-start</code>). The value <code class=\"programming-highlighted-text\">flex-end</code> does the opposite, pushing items to either the very right or bottom of the flexbox. To center elements horizontally in the context of <code class=\"programming-highlighted-text\">flex-direction: row</code>, use <code class=\"programming-highlighted-text\">justify-content: center</code>. To center elements vertically, use <code class=\"programming-highlighted-text\">align-items: center</code>.
+</p>
+<br/><br/>
+<div class=\"content-img-wrapper\">
+    <img class=\"content-img\" src=\"../../assets/images/justify-content.gif\" />
+    <p class=\"caption\">Image source: https://medium.freecodecamp.org/an-animated-guide-to-flexbox</p>
+</div>
+<br/><br/>
+<p>
+    Now, I made it clear that these properties and values functioned in this way only in the context of <code class=\"programming-highlighted-text\">flex-direction: row</code> because they are reversed when <code class=\"programming-highlighted-text\">flex-direction</code> is set to <code class=\"programming-highlighted-text\">column</code>. In the context of a <code class=\"programming-highlighted-text\">column</code> flexbox, <code class=\"programming-highlighted-text\">justify-content</code> determines the <span class=\"programming-highlighted-text\">vertical layout</span> of elements and <code class=\"programming-highlighted-text\">align-items</code> determines the <span class=\"programming-highlighted-text\">horizontal layout</span>, the direct opposite of the last sentence from the first paragraph of this section. This means all the properties, values and their functions are flipped in this context. For example, <code class=\"programming-highlighted-text\">justify-content: flex-start</code> positions items at the very top of the flexbox container instead of to the very left.
+</p>
+<br/><br/>
+<div class=\"content-img-wrapper\">
+    <img class=\"content-img smaller\" src=\"../../assets/images/flexbox-rotate.png\" />
+    <p class=\"caption\">Image source: WDD Lecture 4, Fall 2018</p>
+</div>
+<br/><br/>
+<p>
+    The above picture can be rotated to show how the two properties change based on the direction. The property <code class=\"programming-highlighted-text\">justify-content</code> goes across horizontally, signifying that it deals with horizontal layout when <code class=\"programming-highlighted-text\">flex-direction: row</code> is read normally and <code class=\"programming-highlighted-text\">align-items</code> goes across vertically, signifying that it deals with vertical layout. If you rotate the image so that <code class=\"programming-highlighted-text\">flex-direction: column</code> is on top and read normally, the opposite will be true, and the functionalities of the properties are reversed.
+</p>
+<br/>
+<h3>Miscellaneous Layout Values</h3>
+<p>
+    In the earlier graphic, two commonly used values for <code class=\"programming-highlighted-text\">justify-content</code> and <code class=\"programming-highlighted-text\">align-items</code> were shown: <code class=\"programming-highlighted-text\">space-between</code> and <code class=\"programming-highlighted-text\">space-around</code>. You may have already been able to tell what they do. They are similar, but different in that <code class=\"programming-highlighted-text\">space-between</code> will put <span class=\"programming-highlighted-text\">as much space between the elements of the flexbox as possible</span> until the outer two elements <span class=\"programming-highlighted-text\">touch the walls</span> (start and end) of their flexbox container. The value <code class=\"programming-highlighted-text\">space-around</code> will put an <span class=\"programming-highlighted-text\">equal amount of space around all of the elements</span> and the two outer elements <span class=\"programming-highlighted-text\">should not touch the walls</span> of their container because there is space on either side of the element. In both settings, the amount of space between elements should be equal. As an example, in the context of <code class=\"programming-highlighted-text\">flex-direction: row</code>, if one of the values is set for <code class=\"programming-highlighted-text\">justify-content</code>, the elements will be spread out <span class=\"programming-highlighted-text\">horizontally</span> whereas they would be spread out <span class=\"programming-highlighted-text\">vertically</span> if one of the values is set for <code class=\"programming-highlighted-text\">align-items</code>.
 </p>
 "
 ---
