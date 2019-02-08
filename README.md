@@ -2,7 +2,7 @@
 
 Handbook for Web Design DeCal students to review concepts from lecture and lab. This handbook is built with Jekyll (and therefore uses Liquid), HTML, CSS, SASS, JS, jQuery, and Grunt.
 
-## Contributing
+## Running and Contributing
 
 To start contributing, clone this repository and navigate into the folder:
 
@@ -66,28 +66,28 @@ Now the important parts:
 
 There are a few things to discuss here that go highly in conjunction with the styles and reused classes:
 
-* Headings
-* Paragraph blocks
-* Line breaks
-* Special text
-  * Bolded text
-  * In-line code
-* Links
-* Images
-* Captions
-* Code blocks
+* **Headings**: There are only `h2` and `h3` styled headings. Use `h2` for main headings and topics, use `h3` for subheadings under `h2` headings. Always make the most of these to break up content chunks and walls of paragraphs.
+* **Paragraph blocks**: 
+* **Line breaks**: 
+* **Special text**: 
+  * **Bolded text**: 
+  * **In-line code**: 
+* **Links**: 
+* **Images**: 
+* **Captions**: 
+* **Code blocks**: 
 
 ### Styles Structure
 
 * Reusable style files
-  * **`_global.scss`**
-  * **`_variables.scss`**
-  * **`_mixins.scss`**
+  * **`_global.scss`**: 
+  * **`_variables.scss`**: 
+  * **`_mixins.scss`**: 
 * Component style files
-    * **`_content.scss`**
-    * **`_home.scss`**
-    * **`_sidebar.scss`**
-    * **`_topics.scss`**
+    * **`_content.scss`**: 
+    * **`_home.scss`**: 
+    * **`_sidebar.scss`**: 
+    * **`_topics.scss`**: 
 * Miscellaneous style files
-  * **`_reset.scss`**
-  * **`main.scss`**
+  * **`_reset.scss`**: 
+  * **`main.scss`**: 
