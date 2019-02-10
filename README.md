@@ -64,30 +64,39 @@ Now the important parts:
 
 ### Further Breakdown of Content
 
-There are a few things to discuss here that go highly in conjunction with the styles and reused classes:
+#### Front Matter Variables
 
-* **Headings**: There are only `h2` and `h3` styled headings. Use `h2` for main headings and topics, use `h3` for subheadings under `h2` headings. Always make the most of these to break up content chunks and walls of paragraphs.
-* **Paragraph blocks**: 
-* **Line breaks**: 
-* **Special text**: 
-  * **Bolded text**: 
-  * **In-line code**: 
-* **Links**: 
-* **Images**: 
-* **Captions**: 
-* **Code blocks**: 
+All content is written within the front matter of an html file for each week. Please read the documentation for front matter linked above if you do not understand what that is. This makes it possible to reuse the same layout, `_layouts/content.html`, for every week's content.
+
+After creating an html file named `week-#.html`, we can begin writing the front matter and the content. In the front matter, we must specify the **week** this content is for, the **title** of the page (e.g., "The Structure of Websites"), the **layout** we are using which will always be `content` for these pages, the **link-type** ("programming-link" for blue links and "design-link" for green links), and the **text** (which is the content you are writing for the page). See `content/programming/week-1.html` for an example.
+
+#### Text Guidelines
+
+For the content in the `text` portion of the front matter, we will use html to structure and style the page. Because of the usage of reusable classes and global styling of html tags in this project, there are a few things to discuss that go highly in conjunction with the styles and reused classes:
+
+* **Headings**: There are only `<h2>` and `<h3>` styled headings in `_global.scss`. Use `<h2>` for main headings and topics, use `<h3>` for subheadings under `<h2>` headings. Always make the most of these to break up content chunks and walls of paragraphs.
+* **Paragraph blocks**: Each paragraph should be enclosed by `<p>` tags which are also styled in `_global.scss`.
+* **Line breaks**: Currently, because of poor initial design, there is a line break or `<br/>` tag between each paragraph and two `<br/>` tags before each new heading. Depending on spacing, there are 1-2 line breaks before images as well (typically 2, but sometimes it causes too much whitespace in which case only use 1). Eventually, styles should be updated to on longer require line breaks.
+* **Special text**: There may be times when you need to highlight or bold words or write in-line code. In these cases, use a `<span>` tag for bolded words and use a `<code>` tag for in-line code. Both of these tags must be within (children of) paragraph tags. There are different classes for design and programming `<span>` tags and `<code>` tags since the programming content will be WDD's blue while the design content will be WDD's green. The respective classes are `programming-highlighted-text` and `design-highlighted-text`.
+* **Special symbols**: If `>`, `<`, or `&` needs to be written, use `&lt;`, `&gt;`, and `&amp;` instead so that it doesn't get mixed up with the rest of the html.
+* **Links**: Use the class `programming-link` for links in the programming sections of the handbook and `design-link` for links in the design sections.
+* **Images**: Use the class `content-image` for images that go in the content pages. If the size needs to be adjusted, use an in-line style attribute and a percentage. Example from programming week 1: `<img class=\"content-img\" src=\"../../assets/images/tags.png\" style=\"width: 80%\" />` (the backslashes cancel double quotes).
+* **Captions**: Most images will have captions either to give credit to the original source or to further describ the image. These should use paragraph tags with the class `caption`.
+* **Code blocks**: At the end of each programming page are example code blocks, handled by the `code.html` in `_includes`. This file uses fairly straightforward if-else statements to include different code blocks in different weeks.
+
+Important note: When adding classes, remember that all the content is written within the front matter of an html file, where there are already quotes around the text. Because of this, when using quotes to specify classes, you either must cancel using a backslash `\` or use single quotes. The preferred way is cancelling using a backslash.
 
 ### Styles Structure
 
 * Reusable style files
-  * **`_global.scss`**: 
-  * **`_variables.scss`**: 
-  * **`_mixins.scss`**: 
+  * **`_global.scss`**: Global styles, handbook default styles for tags and reusable classes.
+  * **`_variables.scss`**: Variables for colors used throughout the handbook.
+  * **`_mixins.scss`**: Reusable font styling, transitions, and other styles.
 * Component style files
-    * **`_content.scss`**: 
-    * **`_home.scss`**: 
-    * **`_sidebar.scss`**: 
-    * **`_topics.scss`**: 
+    * **`_content.scss`**: Styles for the content layout.
+    * **`_home.scss`**: Styles for the home layout.
+    * **`_sidebar.scss`**: Styles for the sidebar and sidebar-item includes.
+    * **`_topics.scss`**: Style for the topic-item include.
 * Miscellaneous style files
-  * **`_reset.scss`**: 
-  * **`main.scss`**: 
+  * **`_reset.scss`**: Eric Meyer's CSS reset.
+  * **`main.scss`**: Main file, where all other partials are imported.
