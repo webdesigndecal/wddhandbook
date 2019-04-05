@@ -14,7 +14,13 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 4vh;
+    margin-top: 1vh;
+}
+
+.selector-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .selector-item {
@@ -28,7 +34,7 @@
     position: relative;
 }
 
-.selector-item:first-child {
+.selector-item-wrapper:first-child .selector-item {
     background-color: $primary-blue;
     @include reg-transition;
 
@@ -37,7 +43,7 @@
     }
 }
 
-.selector-item:last-child {
+.selector-item-wrapper:last-child .selector-item {
     background-color: darken($primary-green, 10%);
     @include reg-transition;
 
@@ -57,11 +63,11 @@
   width: 0;
 }
 
-.selector-item:first-child:before {
+.selector-item-wrapper:first-child .selector-item:before {
     border-color: darken($primary-blue, 20%) #fff;
 }
 
-.selector-item:last-child:before {
+.selector-item-wrapper:last-child .selector-item:before {
     border-color: darken($primary-green, 25%) #fff;
 }
 
