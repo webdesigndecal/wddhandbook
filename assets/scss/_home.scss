@@ -1,6 +1,10 @@
 @import "variables",
         "mixins";
 
+.home-header {
+    padding-top: 8vh;
+}
+
 .selector-wrapper {
     width: 100vw;
     display: flex;
