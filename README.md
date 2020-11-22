@@ -19,8 +19,10 @@ yarn install
 Install Jekyll [here](https://jekyllrb.com/) and run:
 
 ```
-jekyll serve
+bundle exec jekyll serve --trace
 ```
+
+(Normally, you could run with `jekyll serve`, but some dependencies are out-of-date or messed up.)
 
 To compile the SCSS files, run:
 
