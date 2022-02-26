@@ -9,7 +9,7 @@
     "grunt-contrib-cssmin": "^2.2.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "prismjs": "^1.21.0"
+    "prismjs": "^1.27.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
